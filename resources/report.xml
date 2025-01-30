@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="PHPUnit tests">
+    <testsuite name="" tests="44" assertions="83" errors="0" failures="0" skipped="1" time="89.254474">
+        <testsuite name="Tests\Feature\ApiTokenPermissionsTest" file="tests/Feature/ApiTokenPermissionsTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="5.626141">
+            <testcase name="api token permissions can be updated" class="Tests\Feature\ApiTokenPermissionsTest" classname="Tests.Feature.ApiTokenPermissionsTest" file="tests/Feature/ApiTokenPermissionsTest.php::api token permissions can be updated" line="0" assertions="3" time="5.626141"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\AuthenticationTest" file="tests/Feature/AuthenticationTest.php" tests="3" assertions="5" errors="0" failures="0" skipped="0" time="5.844751">
+            <testcase name="login screen can be rendered" class="Tests\Feature\AuthenticationTest" classname="Tests.Feature.AuthenticationTest" file="tests/Feature/AuthenticationTest.php::login screen can be rendered" line="0" assertions="1" time="5.636331"/>
+            <testcase name="users can authenticate using the login screen" class="Tests\Feature\AuthenticationTest" classname="Tests.Feature.AuthenticationTest" file="tests/Feature/AuthenticationTest.php::users can authenticate using the login screen" line="0" assertions="3" time="0.112125"/>
+            <testcase name="users cannot authenticate with invalid password" class="Tests\Feature\AuthenticationTest" classname="Tests.Feature.AuthenticationTest" file="tests/Feature/AuthenticationTest.php::users cannot authenticate with invalid password" line="0" assertions="1" time="0.096296"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\BrowserSessionsTest" file="tests/Feature/BrowserSessionsTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="5.673032">
+            <testcase name="other browser sessions can be logged out" class="Tests\Feature\BrowserSessionsTest" classname="Tests.Feature.BrowserSessionsTest" file="tests/Feature/BrowserSessionsTest.php::other browser sessions can be logged out" line="0" assertions="1" time="5.673032"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\CreateApiTokenTest" file="tests/Feature/CreateApiTokenTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="5.728244">
+            <testcase name="api tokens can be created" class="Tests\Feature\CreateApiTokenTest" classname="Tests.Feature.CreateApiTokenTest" file="tests/Feature/CreateApiTokenTest.php::api tokens can be created" line="0" assertions="4" time="5.728244"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\CreateTeamTest" file="tests/Feature/CreateTeamTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="5.713738">
+            <testcase name="teams can be created" class="Tests\Feature\CreateTeamTest" classname="Tests.Feature.CreateTeamTest" file="tests/Feature/CreateTeamTest.php::teams can be created" line="0" assertions="2" time="5.713738"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\DeleteAccountTest" file="tests/Feature/DeleteAccountTest.php" tests="2" assertions="5" errors="0" failures="0" skipped="0" time="5.833867">
+            <testcase name="user accounts can be deleted" class="Tests\Feature\DeleteAccountTest" classname="Tests.Feature.DeleteAccountTest" file="tests/Feature/DeleteAccountTest.php::user accounts can be deleted" line="0" assertions="1" time="5.702827"/>
+            <testcase name="correct password must be provided before account can be deleted" class="Tests\Feature\DeleteAccountTest" classname="Tests.Feature.DeleteAccountTest" file="tests/Feature/DeleteAccountTest.php::correct password must be provided before account can be deleted" line="0" assertions="4" time="0.131040"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\DeleteApiTokenTest" file="tests/Feature/DeleteApiTokenTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="5.56636">
+            <testcase name="api tokens can be deleted" class="Tests\Feature\DeleteApiTokenTest" classname="Tests.Feature.DeleteApiTokenTest" file="tests/Feature/DeleteApiTokenTest.php::api tokens can be deleted" line="0" assertions="1" time="5.566360"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\DeleteTeamTest" file="tests/Feature/DeleteTeamTest.php" tests="2" assertions="6" errors="0" failures="0" skipped="0" time="5.819036">
+            <testcase name="teams can be deleted" class="Tests\Feature\DeleteTeamTest" classname="Tests.Feature.DeleteTeamTest" file="tests/Feature/DeleteTeamTest.php::teams can be deleted" line="0" assertions="2" time="5.685400"/>
+            <testcase name="personal teams cant be deleted" class="Tests\Feature\DeleteTeamTest" classname="Tests.Feature.DeleteTeamTest" file="tests/Feature/DeleteTeamTest.php::personal teams cant be deleted" line="0" assertions="4" time="0.133636"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\EmailVerificationTest" file="tests/Feature/EmailVerificationTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="5.89551">
+            <testcase name="email verification screen can be rendered" class="Tests\Feature\EmailVerificationTest" classname="Tests.Feature.EmailVerificationTest" file="tests/Feature/EmailVerificationTest.php::email verification screen can be rendered" line="0" assertions="1" time="5.693694"/>
+            <testcase name="email can be verified" class="Tests\Feature\EmailVerificationTest" classname="Tests.Feature.EmailVerificationTest" file="tests/Feature/EmailVerificationTest.php::email can be verified" line="0" assertions="4" time="0.106642"/>
+            <testcase name="email can not verified with invalid hash" class="Tests\Feature\EmailVerificationTest" classname="Tests.Feature.EmailVerificationTest" file="tests/Feature/EmailVerificationTest.php::email can not verified with invalid hash" line="0" assertions="1" time="0.095174"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\ExampleTest" file="tests/Feature/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="5.700768">
+            <testcase name="it returns a successful response" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" file="tests/Feature/ExampleTest.php::it returns a successful response" line="0" assertions="1" time="5.700768"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\InviteTeamMemberTest" file="tests/Feature/InviteTeamMemberTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="5.934806">
+            <testcase name="team members can be invited to team" class="Tests\Feature\InviteTeamMemberTest" classname="Tests.Feature.InviteTeamMemberTest" file="tests/Feature/InviteTeamMemberTest.php::team members can be invited to team" line="0" assertions="2" time="5.711544"/>
+            <testcase name="team member invitations can be cancelled" class="Tests\Feature\InviteTeamMemberTest" classname="Tests.Feature.InviteTeamMemberTest" file="tests/Feature/InviteTeamMemberTest.php::team member invitations can be cancelled" line="0" assertions="1" time="0.223262"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\LeaveTeamTest" file="tests/Feature/LeaveTeamTest.php" tests="2" assertions="5" errors="0" failures="0" skipped="0" time="5.827711">
+            <testcase name="users can leave teams" class="Tests\Feature\LeaveTeamTest" classname="Tests.Feature.LeaveTeamTest" file="tests/Feature/LeaveTeamTest.php::users can leave teams" line="0" assertions="1" time="5.658595"/>
+            <testcase name="team owners cant leave their own team" class="Tests\Feature\LeaveTeamTest" classname="Tests.Feature.LeaveTeamTest" file="tests/Feature/LeaveTeamTest.php::team owners cant leave their own team" line="0" assertions="4" time="0.169116"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\PasswordConfirmationTest" file="tests/Feature/PasswordConfirmationTest.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="6.015707">
+            <testcase name="confirm password screen can be rendered" class="Tests\Feature\PasswordConfirmationTest" classname="Tests.Feature.PasswordConfirmationTest" file="tests/Feature/PasswordConfirmationTest.php::confirm password screen can be rendered" line="0" assertions="1" time="5.641204"/>
+            <testcase name="password can be confirmed" class="Tests\Feature\PasswordConfirmationTest" classname="Tests.Feature.PasswordConfirmationTest" file="tests/Feature/PasswordConfirmationTest.php::password can be confirmed" line="0" assertions="2" time="0.084569"/>
+            <testcase name="password is not confirmed with invalid password" class="Tests\Feature\PasswordConfirmationTest" classname="Tests.Feature.PasswordConfirmationTest" file="tests/Feature/PasswordConfirmationTest.php::password is not confirmed with invalid password" line="0" assertions="1" time="0.289934"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\PasswordResetTest" file="tests/Feature/PasswordResetTest.php" tests="4" assertions="6" errors="0" failures="0" skipped="0" time="5.830348">
+            <testcase name="reset password link screen can be rendered" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" file="tests/Feature/PasswordResetTest.php::reset password link screen can be rendered" line="0" assertions="1" time="5.495606"/>
+            <testcase name="reset password link screen can be rendered" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" file="tests/Feature/PassworddeaResetTest.php::reset password link screen can be rendered" line="0" assertions="1" time="5.495606"/>
+            <testcase name="reset password link can be requested" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" file="tests/Feature/PasswordResetTest.php::reset password link can be requested" line="0" assertions="1" time="0.123193"/>
+            <testcase name="reset password screen can be rendered" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" file="tests/Feature/PasswordResetTest.php::reset password screen can be rendered" line="0" assertions="2" time="0.099563"/>
+            <testcase name="password can be reset with valid token" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" file="tests/Feature/PasswordResetTest.php::password can be reset with valid token" line="0" assertions="2" time="0.111987"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\ProfileInformationTest" file="tests/Feature/ProfileInformationTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="5.815038">
+            <testcase name="current profile information is available" class="Tests\Feature\ProfileInformationTest" classname="Tests.Feature.ProfileInformationTest" file="tests/Feature/ProfileInformationTest.php::current profile information is available" line="0" assertions="2" time="5.656718"/>
+            <testcase name="profile information can be updated" class="Tests\Feature\ProfileInformationTest" classname="Tests.Feature.ProfileInformationTest" file="tests/Feature/ProfileInformationTest.php::profile information can be updated" line="0" assertions="2" time="0.158320"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\RegistrationTest" file="tests/Feature/RegistrationTest.php" tests="3" assertions="4" errors="0" failures="0" skipped="1" time="0.258087">
+            <testcase name="registration screen can be rendered" class="Tests\Feature\RegistrationTest" classname="Tests.Feature.RegistrationTest" file="tests/Feature/RegistrationTest.php::registration screen can be rendered" line="0" assertions="1" time="0.089836"/>
+            <testcase name="registration screen cannot be rendered if support is disabled" class="Tests\Feature\RegistrationTest" classname="Tests.Feature.RegistrationTest" file="tests/Feature/RegistrationTest.php::registration screen cannot be rendered if support is disabled" line="0" assertions="0" time="0.063960">
+                <skipped/>
+            </testcase>
+            <testcase name="new users can register" class="Tests\Feature\RegistrationTest" classname="Tests.Feature.RegistrationTest" file="tests/Feature/RegistrationTest.php::new users can register" line="0" assertions="3" time="0.104291"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\RemoveTeamMemberTest" file="tests/Feature/RemoveTeamMemberTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.357775">
+            <testcase name="team members can be removed from teams" class="Tests\Feature\RemoveTeamMemberTest" classname="Tests.Feature.RemoveTeamMemberTest" file="tests/Feature/RemoveTeamMemberTest.php::team members can be removed from teams" line="0" assertions="1" time="0.209129"/>
+            <testcase name="only team owner can remove team members" class="Tests\Feature\RemoveTeamMemberTest" classname="Tests.Feature.RemoveTeamMemberTest" file="tests/Feature/RemoveTeamMemberTest.php::only team owner can remove team members" line="0" assertions="1" time="0.148647"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\TwoFactorAuthenticationSettingsTest" file="tests/Feature/TwoFactorAuthenticationSettingsTest.php" tests="3" assertions="6" errors="0" failures="0" skipped="0" time="0.842066">
+            <testcase name="two factor authentication can be enabled" class="Tests\Feature\TwoFactorAuthenticationSettingsTest" classname="Tests.Feature.TwoFactorAuthenticationSettingsTest" file="tests/Feature/TwoFactorAuthenticationSettingsTest.php::two factor authentication can be enabled" line="0" assertions="2" time="0.283366"/>
+            <testcase name="recovery codes can be regenerated" class="Tests\Feature\TwoFactorAuthenticationSettingsTest" classname="Tests.Feature.TwoFactorAuthenticationSettingsTest" file="tests/Feature/TwoFactorAuthenticationSettingsTest.php::recovery codes can be regenerated" line="0" assertions="2" time="0.394435"/>
+            <testcase name="two factor authentication can be disabled" class="Tests\Feature\TwoFactorAuthenticationSettingsTest" classname="Tests.Feature.TwoFactorAuthenticationSettingsTest" file="tests/Feature/TwoFactorAuthenticationSettingsTest.php::two factor authentication can be disabled" line="0" assertions="2" time="0.164265"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\UpdatePasswordTest" file="tests/Feature/UpdatePasswordTest.php" tests="3" assertions="9" errors="0" failures="0" skipped="0" time="0.400404">
+            <testcase name="password can be updated" class="Tests\Feature\UpdatePasswordTest" classname="Tests.Feature.UpdatePasswordTest" file="tests/Feature/UpdatePasswordTest.php::password can be updated" line="0" assertions="1" time="0.174344"/>
+            <testcase name="current password must be correct" class="Tests\Feature\UpdatePasswordTest" classname="Tests.Feature.UpdatePasswordTest" file="tests/Feature/UpdatePasswordTest.php::current password must be correct" line="0" assertions="4" time="0.115412"/>
+            <testcase name="new passwords must match" class="Tests\Feature\UpdatePasswordTest" classname="Tests.Feature.UpdatePasswordTest" file="tests/Feature/UpdatePasswordTest.php::new passwords must match" line="0" assertions="4" time="0.110647"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\UpdateTeamMemberRoleTest" file="tests/Feature/UpdateTeamMemberRoleTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.407774">
+            <testcase name="team member roles can be updated" class="Tests\Feature\UpdateTeamMemberRoleTest" classname="Tests.Feature.UpdateTeamMemberRoleTest" file="tests/Feature/UpdateTeamMemberRoleTest.php::team member roles can be updated" line="0" assertions="1" time="0.248072"/>
+            <testcase name="only team owner can update team member roles" class="Tests\Feature\UpdateTeamMemberRoleTest" classname="Tests.Feature.UpdateTeamMemberRoleTest" file="tests/Feature/UpdateTeamMemberRoleTest.php::only team owner can update team member roles" line="0" assertions="2" time="0.159702"/>
+        </testsuite>
+        <testsuite name="Tests\Feature\UpdateTeamNameTest" file="tests/Feature/UpdateTeamNameTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.14788">
+            <testcase name="team names can be updated" class="Tests\Feature\UpdateTeamNameTest" classname="Tests.Feature.UpdateTeamNameTest" file="tests/Feature/UpdateTeamNameTest.php::team names can be updated" line="0" assertions="2" time="0.147880"/>
+        </testsuite>
+        <testsuite name="Tests\Unit\ExampleTest" file="tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.015431">
+            <testcase name="that true is true" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="tests/Unit/ExampleTest.php::that true is true" line="0" assertions="1" time="0.015431"/>
+        </testsuite>
+    </testsuite>
+</testsuites>
