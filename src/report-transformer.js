@@ -1,52 +1,72 @@
-var ReportTransformer = {
-	transform: function(xmlReport) {
-		var doc = (new DOMParser).parseFromString(xmlReport, 'text/xml');
+export var ReportTransformer = {
 
-		var parsedReport = [];
+    transform: function (xmlReport) {
 
-		var testCasesIterator = doc.evaluate('//testcase', doc, null, 5, null);
-		while (node = testCasesIterator.iterateNext()) {
-			parsedReport.push(this.parseTestCase(node));
-		}
+        let doc = (new DOMParser).parseFromString(xmlReport, 'text/xml');
+        //console.log(doc);
+        let parsedReport = [];
 
-		return parsedReport;
-	},
+        let testCasesIterator = doc.evaluate('//testcase', doc, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+        let node;
+        while (node = testCasesIterator.iterateNext()) {
+            //console.log('Found node:', node); // Debugging log
+            parsedReport.push(this.parseTestCase(node));
+        }
 
-	parseTestCase: function(testcaseNode) {
-		var testCase = {
-			type: "testcase",
-			name: testcaseNode.parentNode.getAttribute("name") + "->" + testcaseNode.getAttribute("name"),
-			"class": testcaseNode.getAttribute("class"),
-			file: testcaseNode.getAttribute("file"),
-			line: testcaseNode.getAttribute("line") * 1,
-			time: testcaseNode.getAttribute("time") * 1
-		};
+        return parsedReport;
+    },
 
-		// Add eventual error or failure messages
-		var types = ["error", "failure"];
-		for (var i = 0, c = types.length ; i < c ; i++) {
-			var typedElements = this.getImmediateChildrenByTagName(testcaseNode, types[i]);
-			if (typedElements.length) {
-				var typedElement = typedElements[0];
-				testCase[types[i]] = {
-					type: typedElement.getAttribute("type"),
-					message: typedElement.textContent
-				}
-			}
-		}
+    parseTestCase: function (testcaseNode) {
 
-		return testCase;
-	},
+        let testCase = {
+            type: "testcase",
+            name: testcaseNode.parentNode.getAttribute("name") + "->" + testcaseNode.getAttribute("name"),
+            "class": testcaseNode.getAttribute("class"),
+            file: testcaseNode.getAttribute("file"),
+            line: testcaseNode.getAttribute("line") * 1,
+            time: testcaseNode.getAttribute("time") * 1
+        };
 
-	getImmediateChildrenByTagName: function(node, tagName) {
-		var result = [];
-		for (var i = 0, c = node.childNodes.length ; i < c ; i++) {
-			var child = node.childNodes[i];
-			if (child.tagName === tagName) {
-				result.push(child);
-			}
-		}
+        // Add eventual error or failure messages
+        let types = ["error", "failure"];
+        for (let i = 0, c = types.length; i < c; i++) {
+            let typedElements = this.getImmediateChildrenByTagName(testcaseNode, types[i]);
+            if (typedElements.length) {
+                let typedElement = typedElements[0];
+                testCase[types[i]] = {
+                    type: typedElement.getAttribute("type"),
+                    message: typedElement.textContent
+                }
+            }
+        }
 
-		return result;
-	}
+        return testCase;
+    },
+
+    getImmediateChildrenByTagName: function (node, tagName) {
+
+        let result = [];
+        for (let i = 0, c = node.childNodes.length; i < c; i++) {
+            let child = node.childNodes[i];
+            if (child.tagName === tagName) {
+                result.push(child);
+            }
+        }
+
+        return result;
+    },
+
+    isXMLorHTML: function (inputString) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(inputString, 'text/xml');
+        const isXML = doc.getElementsByTagName('parsererror').length === 0;
+
+        if (isXML) {
+            return 'XML';
+        } else {
+            const doc = parser.parseFromString(inputString, 'text/html');
+            const isHTML = doc.getElementsByTagName('parsererror').length === 0;
+            return isHTML ? 'HTML' : 'Invalid';
+        }
+    }
 };

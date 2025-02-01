@@ -1,37 +1,41 @@
-# PHPUnit d3 report
+# PHPUnitBubble Report
 
 This visualization tool provides a quick way to monitor your PHPUnit test suites.
-With a single glance, you will be able to identify the slowest tests, helping you to improve the overall execution time of your tests.
+
+With a single glance, you'll be able to identify the slowest tests, hopefully helping you to improve the overall execution time of your tests!
 
 Here is what Symfony2 test suite report looks like:
 
 ![Symfony2 test suite, analyzed by PHPUnit D3 report](screenshot.png)
 
-For live demonstration and online report generation, here is the [demo page](https://deanhowe.github.io/phpunit-d3-report//).
+For live demonstration and online report generation, here is the [demo page](https://deanhowe.github.io/phpunit-d3-report/).
 
-## How to generate a report?
+How to generate your own report?
 
-To generate a report, simply execute your PHPUnit test suite including the `--log-junit` argument, such as:
+To generate a report, execute your PHPUnit test suite including the `--log-junit` argument, such as:
 
-``` sh
+```sh
 phpunit --log-junit report.xml
 ```
 
-Then, simply copy-paste your XML report into the report form, and let the magic happen!
+~ or ~
 
-Note: if you want to open this project locally, you will have to create a VirtualHost to see the default Symfony2 report.
-Indeed, it is stored as a pre-computed JSON, and opening it will raise a cross-domain security issue from your browser.
+```sh
+php artisan test -p --log-junit report.xml
+```
+
+Once you have generated your `report.xml` file you can either upload it or if you prefer copypasta it into the textarea on the [website/demo](https://deanhowe.github.io/phpunit-d3-report/) page then let the magic happen!
+
+Or keep reading below about downloading the stand-alone HTML file, which is hopefully a bit more useful.
 
 ## Installing the project locally
 
-If you want to install this project locally, simply clone the [GitHub repository](https://github.com/deanhowe/phpunit-d3-report) and install its Bower dependencies:
+If you want to run this project locally, clone the [repo](https://github.com/deanhowe/phpunit-d3-report) and install its npm dependencies and run `npm run dev`:
 
 ``` sh
-# Cloning repository
 git clone https://github.com/deanhowe/phpunit-d3-report
-
-# Installing dependencies
-bower install
+npm -i
+npm run dev
 ```
 
 ## Re-using the chart
