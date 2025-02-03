@@ -13,7 +13,7 @@ export default ({ mode }) => {
     return defineConfig({
         publicDir: 'resources',
         build: {
-            outDir: process.env.VITE_OUT_DIR ?? 'public',
+            outDir: process.env.VITE_OUT_DIR ?? 'docs',
             rollupOptions: {
                 input: process.env.VITE_OUT_DIR ? 'PHPUnitBubbleReport.html' : 'index.html', // Change this to your new start file
             },
